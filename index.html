@@ -4,40 +4,17 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Michael Adeyemo</title>
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="assets/css/styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <!-- Header -->
-    <header class="site-header">
-      <div class="header-inner container">
-        <a href="/" class="logo">Michael Adeyemo</a>
-
-        <nav class="main-nav">
-          <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#clients">Clients</a></li>
-            <li><a href="#insights">Insights</a></li>
-            <li><a href="#contact" class="cta">Contact</a></li>
-          </ul>
-        </nav>
-
-        <div class="burger" id="burger">
-          <span></span><span></span><span></span>
-        </div>
-      </div>
-
-      <div class="mobile-nav" id="mobileNav">
-        <ul>
-          <li><a href="/home">Home</a></li>
-          <li><a href="/about">About</a></li>
-          <li><a href="/clients">Clients</a></li>
-          <li><a href="/insights">Insights</a></li>
-          <li><a href="/contact" class="cta">Contact</a></li>
-        </ul>
-      </div>
-    </header>
+    <div id="header"></div>
     <!-- ------------- -->
+    <!-- IMAGE BANNER -->
     <section class="image-banner">
       <h1 class="banner-title">Michael Adeyemo</h1>
       <p class="banner-subtitle" id="typing-text"></p>
@@ -47,52 +24,85 @@
       </div>
     </section>
 
+    <!-- EXPERTISE SECTION -->
+    <section class="expertise-section">
+      <div class="container">
+        <h2 class="section-title">EXPERTISE</h2>
+        <div class="expertise-grid">
+          <div class="expertise-card">
+            <div class="svg-wrapper">
+              <span class="material-symbols-outlined">check_circle</span>
+            </div>
+            <h3>Manual & Automated QA</h3>
+            <p>
+              Skilled in developing and executing test strategies that reduce
+              bugs and increase confidence in production systems.
+            </p>
+          </div>
+          <div class="expertise-card">
+            <div class="svg-wrapper">
+              <span class="material-symbols-outlined">shopping_cart</span>
+            </div>
+            <h3>Shopify Development</h3>
+            <p>
+              Specializing in custom sections, Liquid logic, and theme
+              customization for high-converting eCommerce stores.
+            </p>
+          </div>
+          <div class="expertise-card">
+            <div class="svg-wrapper">
+              <span class="material-symbols-outlined">code</span>
+            </div>
+            <h3>Front-End Engineering</h3>
+            <p>
+              Proficient in semantic HTML, CSS, JavaScript, and responsive
+              design with performance-focused UI practices.
+            </p>
+          </div>
+          <div class="expertise-card">
+            <div class="svg-wrapper">
+              <span class="material-symbols-outlined">bug_report</span>
+            </div>
+            <h3>Debugging & Troubleshooting</h3>
+            <p>
+              Strong debugging skills across browser dev tools, APIs, and
+              third-party integrations to ensure smooth user experiences.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- ------ -->
-    <script>
-      const burger = document.getElementById("burger");
-      const mobileNav = document.getElementById("mobileNav");
+    <section class="tech-marquee">
+      <div class="marquee-track">
+        <span>QA Engineer</span>
+        <span>Shopify Developer</span>
+        <span>Manual & Automated Testing</span>
+        <span>Front-End Dev</span>
+        <span>Reliable eCommerce Experiences</span>
+        <span>Cross-Browser Testing</span>
+        <span>Responsive Web</span>
+        <span>CI/CD & Dev Tools</span>
+      </div>
+    </section>
 
-      burger.addEventListener("click", () => {
-        mobileNav.classList.toggle("open");
-        burger.classList.toggle("open");
-      });
+    <!-- IMAGE CAROUSEL -->
+    <!-- <div class="carousel-wrapper">
+      <div class="carousel-track" id="carouselTrack">
+        <a href="./clients"><img src="images/client1.jpg" alt="Client 1" /></a>
+        <a href="./clients"><img src="images/client2.jpg" alt="Client 2" /></a>
+        <a href="./clients"><img src="images/client3.jpg" alt="Client 3" /></a>
+        <a href="./clients"><img src="images/client4.jpg" alt="Client 4" /></a>
+      </div>
+      <button class="carousel-btn prev" id="prevBtn">&#10094;</button>
+      <button class="carousel-btn next" id="nextBtn">&#10095;</button>
+    </div> -->
 
-      // Optional: Close menu when a link is clicked
-      mobileNav.querySelectorAll("a").forEach((link) => {
-        link.addEventListener("click", () => {
-          mobileNav.classList.remove("open");
-          burger.classList.remove("open");
-        });
-      });
-    </script>
-
-    <script>
-      const text =
-        "QA Engineer and Full-Stack Developer with a focus on building reliable, user-centered eCommerce experiences.";
-      const typingEl = document.getElementById("typing-text");
-      let idx = 0;
-      let isDeleting = false;
-      let speed = 40;
-      let pause = 2000;
-
-      function typeEffect() {
-        if (isDeleting) {
-          typingEl.textContent = text.substring(0, idx--);
-          if (idx < 0) {
-            isDeleting = false;
-          }
-        } else {
-          typingEl.textContent = text.substring(0, idx++);
-          if (idx > text.length) {
-            isDeleting = true;
-            setTimeout(typeEffect, pause);
-            return;
-          }
-        }
-        setTimeout(typeEffect, isDeleting ? speed / 2 : speed);
-      }
-
-      typeEffect();
-    </script>
+    <!-- ------ -->
+    <script src="assets/js/load-header.js"></script>
+    <script src="assets/js/mobile-menu.js"></script>
+    <script src="assets/js/typing-effect.js"></script>
+    <script src="assets/js/carousel.js"></script>
   </body>
 </html>
