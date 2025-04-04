@@ -1,4 +1,21 @@
-/* header */
+/* Global font settings */
+body {
+  font-family: "Proza Libre", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.section-title,
+.banner-title,
+.expertise-section .expertise-card h3,
+.overlay h3 {
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+}
 .site-header {
   background-color: #fff;
   padding: 24px 0;
@@ -12,7 +29,6 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  max-width: 1200px;
   margin: 0 auto;
   padding: 0 24px;
 }
@@ -148,7 +164,6 @@
   font-size: 3rem;
   font-weight: bold;
   margin-bottom: 1rem;
-  font-family: "Segoe UI", sans-serif;
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
 }
 
@@ -156,7 +171,6 @@
   font-size: 1.25rem;
   line-height: 1.6;
   min-height: 60px;
-  font-family: "Courier New", monospace;
   white-space: pre-wrap;
   margin-bottom: 2rem;
   max-width: 800px;
@@ -173,7 +187,7 @@
 .btn {
   text-decoration: none;
   padding: 0.75rem 1.5rem;
-  border-radius: 6px;
+  border-radius: 999px;
   font-weight: 600;
   transition: background 0.3s ease;
 }
@@ -271,7 +285,6 @@
 .marquee-track span {
   display: inline-block;
   margin-right: 48px;
-  font-family: "Segoe UI", sans-serif;
   text-transform: uppercase;
   letter-spacing: 1px;
   color: #ffffff;
@@ -435,4 +448,118 @@
     width: 280px;
     height: 280px;
   }
+}
+
+/* -------- */
+/* Wavy hover effect for all buttons */
+/* .btn {
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+} */
+
+/* Create the wave-like animated overlay */
+/* .btn::before {
+  content: "";
+  position: absolute;
+  bottom: -100%;
+  left: 0;
+  width: 100%;
+  height: 200%;
+  background: #ffffff22;
+  background: linear-gradient(180deg, #00764b 0%, #0f766e 100%);
+  transform: skewY(5deg);
+  z-index: -1;
+  transition: all 0.5s ease-in-out;
+} */
+
+/* On hover, animate the pseudo-element to move upward */
+/* .btn:hover::before {
+  bottom: 0;
+} */
+
+/* Ensure text color transitions properly */
+/* .btn:hover {
+  color: white !important;
+} */
+
+/* ---------------------------------------------- */
+
+/* ABOUT PAGE */
+
+.about-section {
+  padding: 80px 24px;
+  background-color: #ffffff;
+}
+
+.about-section .section-title {
+  text-align: center;
+  font-size: 2.5rem;
+  color: #101820;
+  margin-bottom: 48px;
+}
+
+.about-content {
+  max-width: 800px;
+  margin: 0 auto;
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #333c4d;
+}
+
+.about-content .about-intro {
+  font-size: 1.2rem;
+  font-weight: 500;
+  margin-bottom: 24px;
+  color: #0f172a;
+}
+
+.about-subheading {
+  font-size: 1.25rem;
+  margin-top: 40px;
+  margin-bottom: 16px;
+  color: #101820;
+}
+
+.about-highlights {
+  list-style-type: disc;
+  padding-left: 1.5rem;
+  color: #333c4d;
+}
+
+.about-highlights li {
+  margin-bottom: 12px;
+}
+
+/* --------------------- */
+/* INSIGHTS PAGE */
+.insights-section {
+  padding: 80px 24px;
+  background-color: #ffffff;
+}
+
+.insights-section .section-title {
+  text-align: center;
+  font-size: 2.5rem;
+  color: #101820;
+  margin-bottom: 48px;
+}
+
+.insights-grid {
+  display: grid;
+  gap: 32px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.insight-item h3 {
+  font-size: 1.25rem;
+  color: #00764b;
+  margin-bottom: 12px;
+}
+
+.insight-item p {
+  font-size: 1rem;
+  color: #333c4d;
+  line-height: 1.6;
 }
