@@ -1,3 +1,10 @@
+html,
+body {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
 /* Global font settings */
 body {
   font-family: "Proza Libre", sans-serif;
@@ -13,9 +20,9 @@ h6,
 .banner-title,
 .expertise-section .expertise-card h3,
 .overlay h3 {
-  font-family: "Inter", sans-serif;
-  font-weight: 700;
+  font-family: "Questrial", sans-serif;
 }
+
 .site-header {
   background-color: #fff;
   padding: 24px 0;
@@ -213,52 +220,40 @@ h6,
 }
 
 /* CAROUSEL */
-
-.carousel-wrapper {
+.carousel-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
   position: relative;
   overflow: hidden;
-  max-width: 100%;
-  margin: 2rem auto;
+  padding: 0 12px;
+  height: 100%;
 }
 
-.carousel-track {
-  display: flex;
-  transition: transform 0.5s ease-in-out;
-}
-
-.carousel-track a {
-  flex: 0 0 100%;
-  max-width: 100%;
-  text-decoration: none;
-}
-
-.carousel-track img {
+.carousel-item img {
+  display: block;
   width: 100%;
   height: auto;
-  display: block;
+  border-radius: 12px;
 }
 
-.carousel-btn {
+.carousel-caption {
   position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background: rgba(0, 0, 0, 0.5);
-  color: #fff;
-  border: none;
+  bottom: 0;
+  left: 0;
+  width: 100%;
   padding: 1rem;
-  cursor: pointer;
-  z-index: 10;
+  background: rgba(16, 24, 32, 0.7);
+  color: #fff;
+  text-align: center;
+  font-size: 1.1rem;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  border-radius: 0 0 12px 12px;
 }
 
-.carousel-btn.prev {
-  left: 10px;
-}
-.carousel-btn.next {
-  right: 10px;
-}
-
-.carousel-btn:hover {
-  background: rgba(0, 0, 0, 0.7);
+.carousel-item:hover .carousel-caption {
+  opacity: 1;
 }
 
 /* ------ */
@@ -399,6 +394,7 @@ h6,
   height: 300px;
   display: block;
   object-fit: cover;
+  object-position: top;
 }
 
 .carousel-caption {
@@ -562,4 +558,116 @@ h6,
   font-size: 1rem;
   color: #333c4d;
   line-height: 1.6;
+}
+
+/* ------------------- */
+/* CLIENTS PAGE */
+.clients-intro {
+  padding: 80px 24px 40px;
+  background: #f4f4f4;
+  text-align: center;
+}
+
+.page-title {
+  font-size: 2.75rem;
+  color: #101820;
+  margin-bottom: 16px;
+}
+
+.page-description {
+  font-size: 1.125rem;
+  color: #333c4d;
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.clients-grid-section {
+  padding: 60px 24px;
+  background: #f9f9f9;
+}
+
+.clients-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 40px;
+  margin: 40px 40px;
+}
+
+.client-card {
+  display: flex;
+  flex-direction: column;
+  background: #ffffff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease;
+}
+
+.client-card:hover {
+  transform: translateY(-6px);
+}
+
+.client-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  object-position: top;
+  display: block;
+  border-bottom: 1px solid #eee;
+}
+
+.client-content {
+  padding: 24px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.client-content h3 {
+  font-size: 1.375rem;
+  color: #101820;
+  margin: 0;
+}
+
+.client-content p {
+  font-size: 1rem;
+  color: #333c4d;
+  line-height: 1.5;
+}
+
+.tech-focus {
+  display: block;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #0f766e;
+  margin-bottom: 8px;
+  letter-spacing: 0.3px;
+}
+
+.client-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.client-tags span {
+  background: #e6f2ef;
+  color: #0f766e;
+  font-size: 0.875rem;
+  padding: 4px 10px;
+  border-radius: 999px;
+  white-space: nowrap;
+}
+
+.client-link {
+  margin-top: auto;
+  text-decoration: none;
+  color: #0f766e;
+  font-weight: 600;
+  transition: color 0.2s ease;
+}
+
+.client-link:hover {
+  color: #115e59;
 }
