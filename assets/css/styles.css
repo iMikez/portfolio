@@ -157,7 +157,7 @@ h6,
   background-image: url("/portfolio/images/main-banner-image.jpg");
   background-size: cover;
   background-position: center;
-  height: 100vh;
+  height: 500px;
   color: white;
   display: flex;
   flex-direction: column;
