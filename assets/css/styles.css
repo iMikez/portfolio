@@ -154,7 +154,7 @@ h6,
 /* Image Banner */
 .image-banner {
   position: relative;
-  background-image: url("/images/main-banner-image.jpg");
+  background-image: url("/portfolio/images/main-banner-image.jpg");
   background-size: cover;
   background-position: center;
   height: 100vh;
