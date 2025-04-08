@@ -4,6 +4,18 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Michael Adeyemo</title>
+    <!-- Slick CSS -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"
+    />
+
     <link rel="stylesheet" href="assets/css/styles.css" />
     <link rel="stylesheet" href="assets/css/footer.css" />
     <link
@@ -11,7 +23,7 @@
       rel="stylesheet"
     />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Questrial&display=swap"
       rel="stylesheet"
     />
   </head>
@@ -93,60 +105,73 @@
     </section>
 
     <!-- Client Gallery -->
+    <!-- CLIENT WORK CAROUSEL -->
     <section class="client-carousel-section" id="clients">
       <div class="container">
         <h2 class="section-title">CLIENT WORK</h2>
-        <div class="carousel-wrapper">
-          <div class="carousel-track" id="carouselTrack">
-            <div class="carousel-item">
-              <img
-                src="/images/pets-at-home-image.png"
-                alt="Pets at Home"
-                width="400"
-                height="240"
-              />
-              <div class="carousel-caption">Pets at Home</div>
-            </div>
-            <div class="carousel-item">
-              <img
-                src="/images/boots-image.png"
-                alt="Boots"
-                width="400"
-                height="240"
-              />
-              <div class="carousel-caption">Boots</div>
-            </div>
-            <div class="carousel-item">
-              <img
-                src="/images/tui-image.png"
-                alt="TUI"
-                width="400"
-                height="240"
-              />
-              <div class="carousel-caption">TUI</div>
-            </div>
-            <div class="carousel-item">
-              <img
-                src="/images/fitxr-image.png"
-                alt="FitXR"
-                width="400"
-                height="240"
-              />
-              <div class="carousel-caption">FitXR</div>
-            </div>
-            <div class="carousel-item">
-              <img
-                src="/images/wowcher-image.png"
-                alt="Wowcher"
-                width="400"
-                height="240"
-              />
-              <div class="carousel-caption">Wowcher</div>
-            </div>
+        <div class="carousel-track" id="carouselTrack">
+          <div class="carousel-item">
+            <a href="https://www.setantabooks.com/" target="_blank">
+              <div class="image-wrapper">
+                <img
+                  src="/images/setanta-books-image.png"
+                  alt="Setanta Books"
+                />
+              </div>
+              <div class="carousel-caption">Setanta Books</div>
+            </a>
           </div>
-
-          <button class="carousel-btn prev" id="prevBtn">&#10094;</button>
-          <button class="carousel-btn next" id="nextBtn">&#10095;</button>
+          <div class="carousel-item">
+            <a href="https://www.beardsanddaisies.co.uk/" target="_blank">
+              <div class="image-wrapper">
+                <img
+                  src="/images/beards-and-daisies-image.png"
+                  alt="Beards And Daisies"
+                />
+              </div>
+              <div class="carousel-caption">Beards And Daisies</div>
+            </a>
+          </div>
+          <div class="carousel-item">
+            <a href="https://fitxr.com/" target="_blank">
+              <div class="image-wrapper">
+                <img src="/images/fitxr-image.png" alt="FitXR" />
+              </div>
+              <div class="carousel-caption">FitXR</div>
+            </a>
+          </div>
+          <div class="carousel-item">
+            <a href="https://www.wowcher.co.uk/" target="_blank">
+              <div class="image-wrapper">
+                <img src="/images/wowcher-image.png" alt="Wowcher" />
+              </div>
+              <div class="carousel-caption">Wowcher</div>
+            </a>
+          </div>
+          <div class="carousel-item">
+            <a href="https://www.petsathome.com/" target="_blank">
+              <div class="image-wrapper">
+                <img src="/images/pets-at-home-image.png" alt="Pets at Home" />
+              </div>
+              <div class="carousel-caption">Pets at Home</div>
+            </a>
+          </div>
+          <div class="carousel-item">
+            <a href="https://www.boots.com/" target="_blank">
+              <div class="image-wrapper">
+                <img src="/images/boots-image.png" alt="Boots UK" />
+              </div>
+              <div class="carousel-caption">Boots UK</div>
+            </a>
+          </div>
+          <div class="carousel-item">
+            <a href="https://www.tui.co.uk/" target="_blank">
+              <div class="image-wrapper">
+                <img src="/images/tui-image.png" alt="TUI Holidays" />
+              </div>
+              <div class="carousel-caption">TUI Holidays</div>
+            </a>
+          </div>
         </div>
       </div>
     </section>
@@ -159,7 +184,44 @@
     <script src="assets/js/load-header.js"></script>
     <script src="assets/js/mobile-menu.js"></script>
     <script src="assets/js/typing-effect.js"></script>
-    <script src="assets/js/carousel.js"></script>
+    <!-- <script src="assets/js/carousel.js"></script> -->
+    <!-- Slick JS -->
+    <script
+      type="text/javascript"
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
+    ></script>
+    <script>
+      $(document).ready(function () {
+        $("#carouselTrack").slick({
+          slidesToShow: 4,
+          slidesToScroll: 1,
+          arrows: true,
+          dots: false,
+          infinite: true,
+          autoplay: true,
+          autoplaySpeed: 2000,
+          responsive: [
+            {
+              breakpoint: 1440,
+              settings: { slidesToShow: 3 },
+            },
+            {
+              breakpoint: 1024,
+              settings: { slidesToShow: 2 },
+            },
+            {
+              breakpoint: 600,
+              settings: { slidesToShow: 1 },
+            },
+          ],
+        });
+      });
+    </script>
+
     <script src="assets/js/load-footer.js"></script>
   </body>
 </html>
