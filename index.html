@@ -26,6 +26,20 @@
       href="https://fonts.googleapis.com/css2?family=Questrial&display=swap"
       rel="stylesheet"
     />
+
+    <link
+      rel="preload"
+      as="image"
+      href="images/main-banner-image.webp"
+      type="image/webp"
+      fetchpriority="high"
+    />
+    <link
+      rel="preload"
+      as="image"
+      href="images/main-banner-image.jpg"
+      fetchpriority="high"
+    />
   </head>
   <body>
     <!-- Header -->
@@ -33,6 +47,17 @@
     <!-- ------------- -->
     <!-- IMAGE BANNER -->
     <section class="image-banner">
+      <picture>
+        <source srcset="images/main-banner-image.webp" type="image/webp" />
+        <img
+          src="images/main-banner-image.jpg"
+          alt="Michael Adeyemo banner"
+          loading="eager"
+          fetchpriority="high"
+          class="banner-bg"
+        />
+      </picture>
+
       <h1 class="banner-title">Michael Adeyemo</h1>
       <p class="banner-subtitle" id="typing-text"></p>
       <div class="banner-buttons">
