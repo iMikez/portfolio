@@ -191,6 +191,30 @@ h6,
   flex-wrap: wrap;
 }
 
+.image-banner {
+  position: relative;
+  height: 500px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  padding: 2rem;
+}
+
+.image-banner picture,
+.image-banner img.banner-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
 .btn {
   text-decoration: none;
   padding: 0.75rem 1.5rem;
