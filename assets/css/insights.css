@@ -1,0 +1,63 @@
+.insights-section {
+  padding: 80px 24px;
+  background-color: #ffffff;
+}
+
+.insights-section .section-title {
+  text-align: center;
+  font-size: 2.5rem;
+  color: #101820;
+  margin-bottom: 48px;
+}
+
+.insights-grid {
+  display: grid;
+  gap: 32px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.insight-item h3 {
+  font-size: 1.25rem;
+  color: #00764b;
+  margin-bottom: 12px;
+}
+
+.insight-item p {
+  font-size: 1rem;
+  color: #333c4d;
+  line-height: 1.6;
+}
+
+.insight-question {
+  cursor: pointer;
+  position: relative;
+  padding-right: 24px;
+  transition: color 0.3s ease;
+}
+
+.insight-question::after {
+  content: "+";
+  font-size: 1.25rem;
+  position: absolute;
+  right: 0;
+  top: 0;
+  color: #00764b;
+  font-weight: 600;
+  transition: transform 0.3s ease;
+}
+
+.insight-question.active {
+  color: #0f766e;
+  font-weight: 600;
+}
+
+.insight-question.active::after {
+  content: "−";
+  transform: none;
+}
+
+.insight-answer {
+  transition: all 0.3s ease;
+  margin-top: 8px;
+}

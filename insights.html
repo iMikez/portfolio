@@ -6,6 +6,7 @@
     <title>Michael Adeyemo</title>
     <link rel="stylesheet" href="assets/css/styles.css" />
     <link rel="stylesheet" href="assets/css/footer.css" />
+    <link rel="stylesheet" href="assets/css/insights.css" />
     <link
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
       rel="stylesheet"
@@ -24,8 +25,10 @@
         <h2 class="section-title">Insights</h2>
         <div class="insights-grid">
           <div class="insight-item">
-            <h3>What makes you stand out from other Shopify developers?</h3>
-            <p>
+            <h3 class="insight-question active">
+              What makes you stand out from other Shopify developers?
+            </h3>
+            <p class="insight-answer" style="display: block">
               My QA background means I don’t just write functional code — I
               write testable, durable, user-centric code. I think about edge
               cases, performance bottlenecks, and long-term scalability while
@@ -34,11 +37,24 @@
           </div>
 
           <div class="insight-item">
-            <h3>
+            <h3 class="insight-question">
+              How do you approach building custom Shopify sections?
+            </h3>
+            <p class="insight-answer" style="display: none">
+              I start by understanding the purpose behind the section — is it
+              conversion-focused, editorial, or brand-enhancing? Then I design a
+              reusable, schema-powered section that empowers content teams to
+              control layout, imagery, and behavior. Every section I build is
+              cleanly scoped, testable, and responsive across breakpoints.
+            </p>
+          </div>
+
+          <div class="insight-item">
+            <h3 class="insight-question">
               Can you describe your QA experience and how it applies to
               development?
             </h3>
-            <p>
+            <p class="insight-answer" style="display: none">
               I’ve worked with manual and automated testing (including Selenium,
               Cypress, and Postman), led test case planning, and caught critical
               bugs in pre-release cycles. This experience taught me how to debug
@@ -48,10 +64,24 @@
           </div>
 
           <div class="insight-item">
-            <h3>
+            <h3 class="insight-question">
+              What’s your process for translating Figma into functional
+              sections?
+            </h3>
+            <p class="insight-answer" style="display: none">
+              I dissect Figma files layer by layer, noting layout behavior, font
+              scaling, spacing logic, and interactive elements. Then I reproduce
+              the UI using semantic HTML and CSS, aligning pixel-perfection with
+              performance. I maintain open comms with designers to clarify
+              intent and suggest scalable improvements where needed.
+            </p>
+          </div>
+
+          <div class="insight-item">
+            <h3 class="insight-question">
               How do you handle cross-browser/device compatibility in your work?
             </h3>
-            <p>
+            <p class="insight-answer" style="display: none">
               I build mobile-first and test across key breakpoints and devices.
               My QA mindset ensures I check for layout shifts, tap targets,
               accessibility, and browser-specific quirks.
@@ -59,8 +89,8 @@
           </div>
 
           <div class="insight-item">
-            <h3>Do you write tests as a developer?</h3>
-            <p>
+            <h3 class="insight-question">Do you write tests as a developer?</h3>
+            <p class="insight-answer" style="display: none">
               Yes — I incorporate testing into my dev flow, including unit tests
               where appropriate and manual QA passes for all interactive
               components. I also write reusable, test-friendly code with QA
@@ -69,12 +99,27 @@
           </div>
 
           <div class="insight-item">
-            <h3>What kind of projects are you most excited by?</h3>
-            <p>
+            <h3 class="insight-question">
+              What kind of projects are you most excited by?
+            </h3>
+            <p class="insight-answer" style="display: none">
               Projects where performance, user experience, and branding meet. I
               love working on interactive custom sections, advanced filtering,
               and anything that challenges me to blend creativity with technical
               depth.
+            </p>
+          </div>
+
+          <div class="insight-item">
+            <h3 class="insight-question">
+              What performance optimizations have you implemented on Shopify?
+            </h3>
+            <p class="insight-answer" style="display: none">
+              I optimize by lazy-loading assets, deferring non-critical scripts,
+              removing unused CSS, and compressing images through Shopify's
+              built-in tools and custom logic. I also reduce Liquid loops, cache
+              complex logic using `assign`, and minimize DOM reflows to ensure
+              smooth interactions and fast load times.
             </p>
           </div>
         </div>
@@ -88,6 +133,7 @@
     <!-- -------- -->
     <script src="assets/js/load-header.js"></script>
     <script src="assets/js/mobile-menu.js"></script>
+    <script src="assets/js/insights.js"></script>
     <script src="assets/js/typing-effect.js"></script>
     <script src="assets/js/carousel.js"></script>
     <script src="assets/js/load-footer.js"></script>

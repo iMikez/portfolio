@@ -553,39 +553,6 @@ h6,
   margin-bottom: 12px;
 }
 
-/* --------------------- */
-/* INSIGHTS PAGE */
-.insights-section {
-  padding: 80px 24px;
-  background-color: #ffffff;
-}
-
-.insights-section .section-title {
-  text-align: center;
-  font-size: 2.5rem;
-  color: #101820;
-  margin-bottom: 48px;
-}
-
-.insights-grid {
-  display: grid;
-  gap: 32px;
-  max-width: 800px;
-  margin: 0 auto;
-}
-
-.insight-item h3 {
-  font-size: 1.25rem;
-  color: #00764b;
-  margin-bottom: 12px;
-}
-
-.insight-item p {
-  font-size: 1rem;
-  color: #333c4d;
-  line-height: 1.6;
-}
-
 /* ------------------- */
 /* CLIENTS PAGE */
 .clients-intro {
