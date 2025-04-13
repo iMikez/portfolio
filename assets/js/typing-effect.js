@@ -1,5 +1,5 @@
 const text =
-  "QA Engineer and Full-Stack Developer with a focus on building reliable, user-centered eCommerce experiences.";
+  "Shopify Developer with a Quality Assurance edge — building fast, scalable, bug-free eCommerce experiences.";
 const typingEl = document.getElementById("typing-text");
 let idx = 0;
 let isDeleting = false;
