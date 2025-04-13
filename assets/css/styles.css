@@ -79,8 +79,7 @@ h6,
   color: white;
 }
 
-/* Mobile Menu */
-/* Burger */
+/* Mobile Menu Burger */
 .burger {
   display: none;
   flex-direction: column;
@@ -135,12 +134,10 @@ h6,
   font-weight: 600;
 }
 
-/* Show mobile nav */
 .mobile-nav.open {
   right: 0;
 }
 
-/* Responsive */
 @media (max-width: 768px) {
   .main-nav {
     display: none;
@@ -214,13 +211,33 @@ h6,
   object-fit: cover;
   z-index: -1;
 }
-
+/* --------- */
 .btn {
+  position: relative;
   text-decoration: none;
   padding: 0.75rem 1.5rem;
   border-radius: 999px;
   font-weight: 600;
-  transition: background 0.3s ease;
+  transition: background 0.4s ease;
+  overflow: hidden;
+}
+
+.btn::after {
+  content: "";
+  position: absolute;
+  bottom: 7px;
+  left: 20%;
+  width: 60%;
+  height: 2px;
+  background: currentColor;
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: transform 0.4s ease;
+  pointer-events: none;
+}
+
+.btn:hover::after {
+  transform: scaleX(1);
 }
 
 .btn.primary {
@@ -243,6 +260,7 @@ h6,
   color: #0f766e;
 }
 
+/* ------- */
 /* CAROUSEL */
 .carousel-item {
   display: flex;
@@ -472,41 +490,6 @@ h6,
   }
 }
 
-/* -------- */
-/* Wavy hover effect for all buttons */
-/* .btn {
-  position: relative;
-  overflow: hidden;
-  z-index: 1;
-} */
-
-/* Create the wave-like animated overlay */
-/* .btn::before {
-  content: "";
-  position: absolute;
-  bottom: -100%;
-  left: 0;
-  width: 100%;
-  height: 200%;
-  background: #ffffff22;
-  background: linear-gradient(180deg, #00764b 0%, #0f766e 100%);
-  transform: skewY(5deg);
-  z-index: -1;
-  transition: all 0.5s ease-in-out;
-} */
-
-/* On hover, animate the pseudo-element to move upward */
-/* .btn:hover::before {
-  bottom: 0;
-} */
-
-/* Ensure text color transitions properly */
-/* .btn:hover {
-  color: white !important;
-} */
-
-/* ---------------------------------------------- */
-
 /* ABOUT PAGE */
 
 .about-section {
@@ -553,7 +536,6 @@ h6,
   margin-bottom: 12px;
 }
 
-/* ------------------- */
 /* CLIENTS PAGE */
 .clients-intro {
   padding: 80px 24px 40px;
