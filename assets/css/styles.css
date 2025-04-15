@@ -268,7 +268,7 @@ h6,
   justify-content: flex-start;
   position: relative;
   overflow: hidden;
-  padding: 12px 12px;
+  margin: 12px 12px;
   height: 100%;
 }
 
