@@ -322,6 +322,8 @@ h6,
 
 .marquee-track span {
   display: inline-block;
+  font-family: "Questrial", sans-serif;
+  font-size: 40px;
   margin-right: 48px;
   text-transform: uppercase;
   letter-spacing: 1px;
